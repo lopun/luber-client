@@ -9,6 +9,10 @@
 # production
 /build
 
+# types
+src/types
+schema.json
+
 # misc
 .DS_Store
 .env.local

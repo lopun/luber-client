@@ -10,6 +10,8 @@
   },
   "rules": {
     "ordered-imports": false,
-    "no-console": false
+    "no-console": false,
+    "max-classes-per-file": false,
+    "jsx-no-lambda": false
   }
 }
