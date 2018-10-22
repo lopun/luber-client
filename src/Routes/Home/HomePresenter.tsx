@@ -2,21 +2,27 @@ import React from "react";
 import styled from "src/typed-components";
 import Helmet from "react-helmet";
 import Sidebar from "react-sidebar";
+import Menu from "src/Components/Menu";
 
 const Container = styled.div``;
 
 interface IProps {
   isMenuOpen: boolean;
   toggleMenu: () => void;
+  loading: boolean;
 }
 
-const HomePresenter: React.SFC<IProps> = ({ isMenuOpen, toggleMenu }) => (
+const HomePresenter: React.SFC<IProps> = ({
+  isMenuOpen,
+  toggleMenu,
+  loading
+}) => (
   <Container>
     <Helmet>
       <title>Home | Luber</title>
     </Helmet>
     <Sidebar
-      sidebar={<b>Sidebar contentdsavasdvasdvsvdas</b>}
+      sidebar={<Menu />}
       open={isMenuOpen}
       onSetOpen={toggleMenu}
       styles={{
@@ -27,7 +33,7 @@ const HomePresenter: React.SFC<IProps> = ({ isMenuOpen, toggleMenu }) => (
         }
       }}
     >
-      <button onClick={() => toggleMenu()}>Open sidebar</button>
+      {!loading && <button onClick={() => toggleMenu()}>Open sidebar</button>}
     </Sidebar>
   </Container>
 );
