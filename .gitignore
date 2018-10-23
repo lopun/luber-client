@@ -12,6 +12,7 @@
 # types
 src/types
 schema.json
+src/cloudinary.ts
 
 # misc
 .DS_Store

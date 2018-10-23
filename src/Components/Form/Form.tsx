@@ -5,18 +5,16 @@ interface IProps {
   className?: string;
 }
 
-const Form: React.SFC<IProps> = ({ submitFn, className, children }) => {
-  return (
-    <form
-      className={className}
-      onSubmit={e => {
-        e.preventDefault();
-        submitFn();
-      }}
-    >
-      {children}
-    </form>
-  );
-};
+const Form: React.SFC<IProps> = ({ submitFn, className, children }) => (
+  <form
+    className={className}
+    onSubmit={e => {
+      e.preventDefault();
+      submitFn();
+    }}
+  >
+    {children}
+  </form>
+);
 
 export default Form;
