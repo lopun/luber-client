@@ -9,10 +9,11 @@
 # production
 /build
 
-# types
+# Private
 src/types
 schema.json
 src/cloudinary.ts
+src/keys.ts
 
 # misc
 .DS_Store
