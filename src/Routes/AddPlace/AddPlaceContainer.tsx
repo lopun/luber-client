@@ -22,8 +22,8 @@ class AddPlaceContainer extends React.Component<IProps, IState> {
   public state = {
     address: "",
     name: "",
-    lat: 1.3231,
-    lng: 1.4325,
+    lat: 0,
+    lng: 0,
     isFav: false
   };
 
@@ -60,6 +60,7 @@ class AddPlaceContainer extends React.Component<IProps, IState> {
             address={address}
             name={name}
             isFav={isFav}
+            pickedAddress={lat !== 0 && lng !== 0}
             onInputChange={this.onInputChange}
             onSubmit={addPlaceFn}
             loading={loading}

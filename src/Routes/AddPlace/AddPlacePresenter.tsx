@@ -29,6 +29,7 @@ interface IProps {
   isFav: boolean;
   loading: boolean;
   onSubmit: MutationFn;
+  pickedAddress: boolean;
 }
 
 const AddPlacePresenter: React.SFC<IProps> = ({
@@ -37,7 +38,8 @@ const AddPlacePresenter: React.SFC<IProps> = ({
   onInputChange,
   isFav,
   onSubmit,
-  loading
+  loading,
+  pickedAddress
 }) => (
   <>
     <Helmet>
@@ -61,10 +63,12 @@ const AddPlacePresenter: React.SFC<IProps> = ({
           placeholder={"Address"}
         />
         <ExtendedLink to={"/find-address"}>Pick place from map</ExtendedLink>
-        <Button
-          onClick={null}
-          value={loading ? "Adding a Place" : "Add Place"}
-        />
+        {pickedAddress && (
+          <Button
+            onClick={null}
+            value={loading ? "Adding a Place" : "Add Place"}
+          />
+        )}
       </Form>
     </Container>
   </>
