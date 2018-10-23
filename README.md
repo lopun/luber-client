@@ -15,9 +15,9 @@ Client for (L)Uber Clone Project. #ReactJS #Apollo #Typescript #GraphQL
 
 - [ ] Home
 - [ ] Ride
-- [ ] Edit Account
-- [ ] Settings
-- [ ] Saved Places
-- [ ] Add Place
+- [x] Edit Account
+- [x] Settings
+- [x] Places
+- [ㅌ] Add Place
 - [ ] Find Address
 - [ ] Challenge: Ride History
